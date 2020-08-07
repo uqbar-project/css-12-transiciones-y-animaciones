@@ -1,0 +1,41 @@
+body {
+  font-family: Roboto;
+}
+
+.container {
+  width: 550px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.cajita {
+  border-color: #45B39D;
+  border-style: solid;
+  border-width: 1px;
+  background-color: aquamarine;
+  padding: 20px;
+}
+
+.titulo {
+  border-color: #45B39D;
+  background-color: #50EBA7;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+section {
+  margin: 10px 0px;
+}
+
+section.container {
+  margin: 0px auto;
+  transition-property: padding;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+section.container:focus {
+  outline: none; /* Le saco el borde que el focus me pone por defecto */
+  padding: 40px 0;
+}

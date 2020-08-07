@@ -1,0 +1,68 @@
+html {
+  font-size: 16px;
+}
+
+:root {
+  --color-primario: #000066;
+  --letra-primario: white;
+  --color-secundario: steelblue;
+  --letra-secundario: white;
+  --separacion-default: 2.5rem;
+  --border-radius-default: 10px;
+  --border-radius-superior: calc(var(--border-radius-default) * 2);
+}
+
+body {
+  font-family: 'Baloo Da 2', serif;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.foto_normal {
+  width: 10rem;
+  height: auto;
+}
+
+.precio {
+  --color-secundario: #1ab348;
+  background-color: var(--color-secundario);
+  color: var(--letra-secundario);
+  padding: 1rem;
+  margin: var(--separacion-default) 30%;
+  font-size: 2em;
+  border-radius: var(--border-radius-superior);
+}
+
+div {
+  margin: var(--separacion-default);
+}
+
+.primario {
+  background-color: var(--color-secundario);
+  color: var(--letra-primario);
+  height: 3rem;
+  width: 10rem;
+  border-radius: var(--border-radius-default);
+  cursor: pointer;
+  transition: all 200ms 100ms, box-shadow 1s 100ms ease-in-out;
+}
+
+.primario:hover {
+  --letra-primario: white;
+  --color-secundario: red;
+  font-size: 20px;
+  filter: brightness(75%);
+  transform: scale(1.5);
+  box-shadow: 0px 0px 6px 4px grey;
+}
+
+.fila {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
