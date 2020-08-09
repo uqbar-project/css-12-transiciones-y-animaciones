@@ -64,7 +64,8 @@ Los valores no son obligatorios y el orden de los valores solo importa si ponemo
 
 Para los ejemplos lo que vamos a hacer es tomar prestado otros ejemplos y darle vida con transiciones.
 
-Para el primer caso voy a tomar el ejemplo donde aprendieron sobre *padding* y darle una transición. 
+Para el primer caso voy a tomar el ejemplo donde aprendieron sobre *padding* y darle una transición.
+
 ![articulos antes](./images/articulos-antes.gif)
 
 #### Preparaciones previas
@@ -123,6 +124,8 @@ section.container:focus {
 Y asi queda:
 
 ![articulos despues](./images/articulos-despues.gif)
+
+[Ejemplo en vivo](https://uqbar-project.github.io/css-12-transiciones-y-animaciones/muchosArticulos.html)
 
 ### Consola de animaciones
 
@@ -203,6 +206,8 @@ Notece que transiciona valores por cambios en variables y tambien transiciona co
 ![variables despues](./images/variables-despues.gif)
 
 Mmm capaz es un poco mucho...
+
+[Ejemplo en vivo](https://uqbar-project.github.io/css-12-transiciones-y-animaciones/variables.html)
 
 ### Propiedades
 
@@ -339,6 +344,8 @@ Asi se veria la animación aplicada a un elemento
 
 ![ejemplo timing function](./images/ejemplo-keyframes.gif)
 
+[Ejemplo en vivo](https://uqbar-project.github.io/css-12-transiciones-y-animaciones/keyframes.html)
+
 
 ### Propiedades
 
@@ -346,21 +353,18 @@ Asi se veria la animación aplicada a un elemento
 
 
 ## Docs
-https://developer.mozilla.org/es/docs/Web/CSS/transition
+[https://developer.mozilla.org/es/docs/Web/CSS/transition](https://developer.mozilla.org/es/docs/Web/CSS/transition)
 
-https://www.w3schools.com/cssref/css3_pr_transition.asp
+[https://www.w3schools.com/cssref/css3_pr_transition.asp](https://www.w3schools.com/cssref/css3_pr_transition.asp)
 
+[https://www.adictosaltrabajo.com/2012/07/09/css3-transiciones-animaciones/](https://www.adictosaltrabajo.com/2012/07/09/css3-transiciones-animaciones/)
 
-https://www.adictosaltrabajo.com/2012/07/09/css3-transiciones-animaciones/
+[https://www.w3schools.com/cssref/css3_pr_animation.asp](https://www.w3schools.com/cssref/css3_pr_animation.asp)
 
+[https://animista.net/](https://animista.net/)
 
-https://www.w3schools.com/cssref/css3_pr_animation.asp
+[https://material.io/design/motion/understanding-motion.html](https://material.io/design/motion/understanding-motion.html)
 
-https://animista.net/
+[https://www.elegantthemes.com/blog/tips-tricks/when-it-makes-sense-to-use-animations-in-web-design](https://www.elegantthemes.com/blog/tips-tricks/when-it-makes-sense-to-use-animations-in-web-design)
 
-
-https://material.io/design/motion/understanding-motion.html
-
-https://www.elegantthemes.com/blog/tips-tricks/when-it-makes-sense-to-use-animations-in-web-design
-
-https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9
+[https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9](https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9)
