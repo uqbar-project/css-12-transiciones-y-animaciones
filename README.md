@@ -1,4 +1,4 @@
-## Ejemplo de transiciones y animaciones
+# Transiciones y animaciones
 
 
 ## Las transiciones
@@ -180,11 +180,77 @@ Y ya podriamos decir que terminamos... no? No!
 }
 ```
 
+Notece que transiciona valores por cambios en variables y tambien transiciona con valores no definidos ya que toma los valores por defecto.
+
 ![variables despues](./images/variables-despues.gif)
 
 Mmm capaz es un poco mucho...
 
 ### Propiedades
+
+#### *transition-property*:
+Especifica el nombre de la propiedad a la cual ponerle un efecto de transicion.
+
+```css
+.class {
+    transition-property: background-color;
+}
+```
+
+Se pueden espificar propiedades compuestas.
+```css
+.class {
+    /* Incluira padding-top padding-right padding-bottom padding-left */
+    transition-property: padding;
+}
+```
+
+Otra opcion es incluir todas las propiedades.
+```css
+.class {
+    transition-property: all;
+}
+```
+
+#### *transition-duration*:
+Especifa cuanto tiempo tomara la transición entre dos estados diferentes. Utiliza las unidades `s`
+para segundos y `ms` para milisegundos.
+
+![ejemplo duration](./images/ejemplo-duration.gif)
+
+#### *transition-delay*:
+Especifa cuanto tiempo tomara la transición en empezar. Al igual que *transition-duration* utiliza las unidades `s`
+para segundos y `ms` para milisegundos.
+
+![ejemplo delay](./images/ejemplo-delay.gif)
+
+#### *transition-timing-function*:
+Esto permite establecer una curva de aceleración para que la velocidad de la transición pueda variar a lo largo de su duración. Hay que aclarar que aunque se modifique la aceleración la duracion permanecera intacta.
+
+Un ejemplo modificando su valor desde la consola de chrome.
+
+![ejemplo timing function](./images/ejemplo-timing.gif)
+
+#### Multiples transiciones
+
+Puedo crear multiples transiciones si separo las propiedades con una coma. Es necesario definir todas las otras propiedades con coma ya que tomara el siguiente valor definido y volvera al primer valor en caso de no tener otro.
+```css
+.class {
+    transition-property: padding, padding-top, color, background-color;
+    transition-duration: 2s, 0s, 200ms;
+    transition-delay: 0s, 800ms;
+    transition-timing-function: ease-in-out;
+}
+```
+Que seria equivalente a
+```css
+.class {
+  transition: padding 2s 0s ease-in-out,
+        padding-top 0s 800ms ease-in-out,
+        color 200ms 0s ease-in-out,
+        background-color 2s 800ms ease-in-out;
+}
+```
 
 ## Las animaciones
 
@@ -197,3 +263,18 @@ Las animaciones son bastante parecidas a las transiciones. Ambas tienen en comú
 ### Propiedades
 
 ### El ejemplo
+
+
+## Docs
+https://developer.mozilla.org/es/docs/Web/CSS/transition
+
+https://developer.mozilla.org/es/docs/Web/CSS/transition-duration
+
+https://developer.mozilla.org/es/docs/Web/CSS/transition-delay
+
+https://developer.mozilla.org/es/docs/Web/CSS/transition-timing-function
+
+https://www.w3schools.com/cssref/css3_pr_transition.asp
+
+
+https://www.adictosaltrabajo.com/2012/07/09/css3-transiciones-animaciones/
