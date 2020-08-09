@@ -1,5 +1,23 @@
 # Transiciones y animaciones
 
+Antes de implementar una transicion o animacion, nos podemos preguntar cuando o para qué puedo usar estas herramientas, estas son algunas de las respuestas:
+
+- Proporcionar información visual cuando se interactúa con un elemento.
+- Destacar las relaciones entre los elementos.
+- Destacar la disponibilidad de una acción.
+- Destacar los resultados de una acción.
+- Revelar informacion escondida como menues o *tooltips*.
+- Centrar la atención en lo que es importante, sin crear distracciones innecesarias.
+- Agregar carácter a las interacciones comunes.
+
+Las animaciones deben llamar la atención... pero no demasiado. Hay que asegurarse de que el movimiento no requiera demasiado tiempo y no dure demasiado en la pantalla. Este es especialmente el caso si hablamos de elementos con los que los usuarios deberían interactuar con frecuencia. Una o dos veces puede ser divertido, pero con un uso frecuente puede volverse realmente frustrante.
+
+Hay lindos ejemplos en la documentacion de material design https://material.io/design/motion/understanding-motion.html
+
+TLDR: No queremos llegar a esto:
+
+![homer web page](./images/homer-web.gif)
+
 
 ## Las transiciones
 
@@ -10,7 +28,7 @@ Este tipo de efectos producen en una página la sensación de que está *"viva"*
 
 ### Sintaxis
 
-Podemos definir las propiedades de transición o usar usar la propiedad abreviada.
+Podemos definir las propiedades individuales de transición o usar usar la propiedad abreviada.
 
 Utilizando las propiedades individuales:
 ```css
@@ -231,6 +249,10 @@ Un ejemplo modificando su valor desde la consola de chrome.
 
 ![ejemplo timing function](./images/ejemplo-timing.gif)
 
+Tambien se puede en Firefox
+
+![ejemplo timing function firefox](./images/ejemplo-timing-firefox.png)
+
 #### Multiples transiciones
 
 Puedo crear multiples transiciones si separo las propiedades con una coma. Es necesario definir todas las otras propiedades con coma ya que tomara el siguiente valor definido y volvera al primer valor en caso de no tener otro.
@@ -258,7 +280,65 @@ Las animaciones son bastante parecidas a las transiciones. Ambas tienen en comú
 
 ### Sintaxis
 
+Al igual que las trnasiciones definir las propiedades individuales o usar usar la propiedad abreviada.
+
+Utilizando las propiedades individuales:
+```css
+div {
+    animation-name: mi-animacion;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+```
+
+Utilizando la propiedad abreviada:
+```css
+div {
+  animation: mi-animacion 5s linear 0.2s infinite normal forwards;
+}
+```
+
+Ningun valor es obligatorio y cada propiedad tiene un valor por defecto.
+
 ### Keyframes
+
+A diferencia de las transiciones no se espera a que suceda un cambio en el estado del elemento. Por eso para usar animaciones necesitamos *keyframes* que describirán el comportamiento que tendrá la animación durante su periodo de ejecución.
+
+Se definen de la siguiente manera:
+
+```css
+@keyframes mi-animacion {
+	0% {
+        width: 10px;
+        height: 10px;
+        background-color: red;
+	}
+	25% {
+		width: 200px;
+	}
+	50% {
+		height: 200px;
+	}
+	75% {
+		width: 100px;
+        height: 100px;
+	}
+	100% {
+        width: 200px;
+        height: 100px;
+        background-color: green;
+    }
+}
+```
+
+Asi se veria la animación aplicada a un elemento
+
+![ejemplo timing function](./images/ejemplo-keyframes.gif)
+
 
 ### Propiedades
 
@@ -268,13 +348,19 @@ Las animaciones son bastante parecidas a las transiciones. Ambas tienen en comú
 ## Docs
 https://developer.mozilla.org/es/docs/Web/CSS/transition
 
-https://developer.mozilla.org/es/docs/Web/CSS/transition-duration
-
-https://developer.mozilla.org/es/docs/Web/CSS/transition-delay
-
-https://developer.mozilla.org/es/docs/Web/CSS/transition-timing-function
-
 https://www.w3schools.com/cssref/css3_pr_transition.asp
 
 
 https://www.adictosaltrabajo.com/2012/07/09/css3-transiciones-animaciones/
+
+
+https://www.w3schools.com/cssref/css3_pr_animation.asp
+
+https://animista.net/
+
+
+https://material.io/design/motion/understanding-motion.html
+
+https://www.elegantthemes.com/blog/tips-tricks/when-it-makes-sense-to-use-animations-in-web-design
+
+https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9

@@ -1,0 +1,28 @@
+div {
+    border: 1px solid grey;
+    animation-name: mi-animacion;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes mi-animacion {
+	0% {
+        width: 10px;
+        height: 10px;
+        background-color: red;
+	}
+	25% {
+		width: 200px;
+	}
+	50% {
+		height: 200px;
+	}
+	75% {
+		width: 100px;
+        height: 100px;
+	}
+	100% {
+        width: 200px;
+        height: 100px;
+        background-color: green;
+	}
+}
