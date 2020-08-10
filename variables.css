@@ -66,3 +66,20 @@ div {
   justify-content: center;
   align-items: center;
 }
+
+.foto_normal {
+  animation: rotacion-pelota 5s infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotacion-pelota {
+  0% {
+    transform: translate(-100px, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(100px, 0) rotate(360deg);
+  }
+  100% {
+    transform: translate(-100px, 0) rotate(0deg);
+  }
+}

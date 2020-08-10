@@ -317,22 +317,22 @@ Se definen de la siguiente manera:
 
 ```css
 @keyframes mi-animacion {
-	0% {
+    0% {
         width: 10px;
         height: 10px;
         background-color: red;
 	}
-	25% {
-		width: 200px;
+    25% {
+        width: 200px;
 	}
-	50% {
-		height: 200px;
-	}
-	75% {
-		width: 100px;
+    50% {
+        height: 200px;
+    }
+    75% {
+        width: 100px;
         height: 100px;
-	}
-	100% {
+    }
+    100% {
         width: 200px;
         height: 100px;
         background-color: green;
@@ -346,10 +346,78 @@ Asi se veria la animación aplicada a un elemento
 
 [Ejemplo en vivo](https://uqbar-project.github.io/css-12-transiciones-y-animaciones/keyframes.html)
 
+### Ejemplo animación inicial
+
+En este ejemplo vamos a tomar el ejemplo de medidas espaciales y vamos a agregar una animación de inicio que puede servir para presentar la informacion secuencialmente al usuario.
+
+![ejemplo animacion inicial](./images/ejemplo-animacion-inicial.png)
+
+Vamos a utilizar una animación reutilizable a todos los elementos que quiera.
+
+```css
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translate(100px, 0);
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+.material_elemento,
+.video_contenedor,
+.testimonio_elemento,
+hr {
+  animation: aparecer 1.2s;
+}
+```
+
+![ejemplo animacion inicial](./images/ejemplo-animacion-inicial-durante.gif)
+
+Una de las ventajas que podemos observar es que la animacion empieza a reproducir cuando termina de cargar los elementos. Ahora puedo controlar el orden en el cual se muestran individualmente.
+
+```css
+.material_elemento,
+.video_contenedor,
+.testimonio_elemento,
+hr {
+    animation: aparecer 1.2s;
+    animation-fill-mode: both; /* Necesario para que los elementos tomen los valores iniciales durante el delay */
+}
+.material_elemento:nth-child(1) {
+    animation-delay: 0;
+}
+.material_elemento:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.material_elemento:nth-child(3) {
+    animation-delay: 1s;
+}
+hr:nth-of-type(1),
+.video_contenedor {
+    animation-delay: 1.5s;
+}
+hr:nth-of-type(2),
+.testimonio_elemento:nth-child(1) {
+    animation-delay: 2s;
+}
+.testimonio_elemento:nth-child(2) {
+    animation-delay: 2.5s;
+}
+.testimonio_elemento:nth-child(3) {
+    animation-delay: 3s;
+}
+```
+
+Y asi queda la carga inicial de la página:
+
+![ejemplo animacion inicial](./images/ejemplo-animacion-inicial-despues.gif)
 
 ### Propiedades
-
-### El ejemplo
 
 
 ## Docs
