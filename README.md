@@ -1,18 +1,18 @@
 # Transiciones y animaciones
 
-Antes de implementar una transicion o animacion, nos podemos preguntar cuando o para qué puedo usar estas herramientas, estas son algunas de las respuestas:
+Antes de implementar una transición o animación, nos podemos preguntar cuándo o para qué puedo usar estas herramientas, estas son algunas de las respuestas:
 
 - Proporcionar información visual cuando se interactúa con un elemento.
 - Destacar las relaciones entre los elementos.
 - Destacar la disponibilidad de una acción.
 - Destacar los resultados de una acción.
-- Revelar informacion escondida como menues o *tooltips*.
+- Revelar información escondida como un menú o un *tooltip*.
 - Centrar la atención en lo que es importante, sin crear distracciones innecesarias.
 - Agregar carácter a las interacciones comunes.
 
 Las animaciones deben llamar la atención... pero no demasiado. Hay que asegurarse de que el movimiento no requiera demasiado tiempo y no dure demasiado en la pantalla. Este es especialmente el caso si hablamos de elementos con los que los usuarios deberían interactuar con frecuencia. Una o dos veces puede ser divertido, pero con un uso frecuente puede volverse realmente frustrante.
 
-Hay lindos ejemplos en la documentacion de material design https://material.io/design/motion/understanding-motion.html
+Hay lindos ejemplos en la documentación de material design https://material.io/design/motion/understanding-motion.html
 
 TLDR: No queremos llegar a esto:
 
@@ -28,7 +28,7 @@ Este tipo de efectos producen en una página la sensación de que está *"viva"*
 
 ### Sintaxis
 
-Podemos definir las propiedades individuales de transición o usar usar la propiedad abreviada.
+Podemos definir las propiedades individuales de transición o usar la propiedad abreviada.
 
 Utilizando las propiedades individuales:
 ```css
@@ -55,22 +55,22 @@ div {
 }
 ```
 
-Los valores no son obligatorios y el orden de los valores solo importa si ponemos un valor de *delay*, que en ese caso hay que ponerlo despues del valor de *duration*.
+Los valores no son obligatorios y el orden de los valores solo importa si ponemos un valor de *delay*, que en ese caso hay que ponerlo después del valor de *duration*.
 
 ![propiedad abreviada transition](./images/transition-propiedad-abreviada.png)
 
 
-### Ejemplo Articulos
+### Ejemplo Artículos
 
 Para los ejemplos lo que vamos a hacer es tomar prestado otros ejemplos y darle vida con transiciones.
 
 Para el primer caso voy a tomar el ejemplo donde aprendieron sobre *padding* y darle una transición.
 
-![articulos antes](./images/articulos-antes.gif)
+![artículos antes](./images/articulos-antes.gif)
 
 #### Preparaciones previas
 
-Para este ejemplo quiero poder poner foco en los distintos articulos, tanto con la tecla tab o con un click. Para esto necesito agregar un tabindex a cada contenedor en orden creciente.
+Para este ejemplo quiero poder poner foco en los distintos artículos, tanto con la tecla tab o con un clic. Para esto necesito agregar un *tabindex* a cada contenedor en orden creciente.
 
 ```html
 <section class="container" tabindex="1">
@@ -99,13 +99,13 @@ section.container:focus {
 }
 ```
 
-Y asi va quedando:
+Y así va quedando:
 
-![articulos mediante](./images/articulos-mediante.gif)
+![artículos mediante](./images/articulos-mediante.gif)
 
-#### Agregandole la transición
+#### Agregándole la transición
 
-Ahora si que tengo el estado inicial y el estado final puedo agregarle la transición:
+Ahora sí que tengo el estado inicial y el estado final puedo agregarle la transición:
 
 ```css
 section.container {
@@ -116,14 +116,15 @@ section.container {
 }
 
 section.container:focus {
-    outline: none; /* Le saco el borde que el focus me pone por defecto */
+    outline: none;
+    /* Le saco el borde que el focus me pone por defecto */
     padding: 40px 0;
 }
 ```
 
-Y asi queda:
+Y así queda:
 
-![articulos despues](./images/articulos-despues.gif)
+![artículos después](./images/articulos-despues.gif)
 
 [Ejemplo en vivo](https://uqbar-project.github.io/css-12-transiciones-y-animaciones/muchosArticulos.html)
 
@@ -158,7 +159,7 @@ En este ejemplo por suerte ya tenemos definido dos estados y vamos a expandir so
 ```
 ![variables antes](./images/variables-antes.gif)
 
-Empecemos transicionando el brillo
+Empecemos con una transición de brillo.
 
 ```css
 .primario {
@@ -177,7 +178,7 @@ Empecemos transicionando el brillo
 
 ![variables antes](./images/variables-durante.gif)
 
-Y ya podriamos decir que terminamos... no? No!
+Y ya podríamos decir que terminamos... ¿no? ¡No!
 
 
 ```css
@@ -201,9 +202,9 @@ Y ya podriamos decir que terminamos... no? No!
 }
 ```
 
-Notece que transiciona valores por cambios en variables y tambien transiciona con valores no definidos ya que toma los valores por defecto.
+Nótese que transiciona valores por cambios en variables y también transiciona con valores no definidos ya que toma los valores por defecto.
 
-![variables despues](./images/variables-despues.gif)
+![variables después](./images/variables-despues.gif)
 
 Mmm capaz es un poco mucho...
 
@@ -212,7 +213,7 @@ Mmm capaz es un poco mucho...
 ### Propiedades
 
 #### *transition-property*:
-Especifica el nombre de la propiedad a la cual ponerle un efecto de transicion.
+Especifica el nombre de la propiedad a la cual ponerle un efecto de transición.
 
 ```css
 .class {
@@ -220,7 +221,7 @@ Especifica el nombre de la propiedad a la cual ponerle un efecto de transicion.
 }
 ```
 
-Se pueden espificar propiedades compuestas.
+Se pueden especificar propiedades compuestas.
 ```css
 .class {
     /* Incluira padding-top padding-right padding-bottom padding-left */
@@ -228,7 +229,7 @@ Se pueden espificar propiedades compuestas.
 }
 ```
 
-Otra opcion es incluir todas las propiedades.
+Otra opción es incluir todas las propiedades.
 ```css
 .class {
     transition-property: all;
@@ -236,31 +237,31 @@ Otra opcion es incluir todas las propiedades.
 ```
 
 #### *transition-duration*:
-Especifa cuanto tiempo tomara la transición entre dos estados diferentes. Utiliza las unidades `s`
+Especifica cuanto tiempo tomara la transición entre dos estados diferentes. Utiliza las unidades `s`
 para segundos y `ms` para milisegundos.
 
 ![ejemplo duration](./images/ejemplo-duration.gif)
 
 #### *transition-delay*:
-Especifa cuanto tiempo tomara la transición en empezar. Al igual que *transition-duration* utiliza las unidades `s`
+Especifica cuanto tiempo tomara la transición en empezar. Utiliza las unidades `s`
 para segundos y `ms` para milisegundos.
 
 ![ejemplo delay](./images/ejemplo-delay.gif)
 
 #### *transition-timing-function*:
-Esto permite establecer una curva de aceleración para que la velocidad de la transición pueda variar a lo largo de su duración. Hay que aclarar que aunque se modifique la aceleración la duracion permanecera intacta.
+Esto permite establecer una curva de aceleración para que la velocidad de la transición pueda variar a lo largo de su duración. Hay que aclarar que, aunque se modifique la aceleración, la duración permanecerá intacta.
 
 Un ejemplo modificando su valor desde la consola de chrome.
 
 ![ejemplo timing function](./images/ejemplo-timing.gif)
 
-Tambien se puede en Firefox
+También se puede en Firefox.
 
 ![ejemplo timing function firefox](./images/ejemplo-timing-firefox.png)
 
 #### Multiples transiciones
 
-Puedo crear multiples transiciones si separo las propiedades con una coma. Es necesario definir todas las otras propiedades con coma ya que tomara el siguiente valor definido y volvera al primer valor en caso de no tener otro.
+Puedo crear múltiples transiciones si separo las propiedades con una coma. Es necesario definir todas las otras propiedades con coma ya que tomará el siguiente valor definido y volverá al primer valor en caso de no tener otro.
 ```css
 .class {
     transition-property: padding, padding-top, color, background-color;
@@ -281,11 +282,11 @@ Que seria equivalente a
 
 ## Las animaciones
 
-Las animaciones son bastante parecidas a las transiciones. Ambas tienen en común que actuan sobre los valores de las propiedades de un elemento transformándolos gradualmente en otros valores. Sin embargo, las animaciones ofrecen bastante más control que las transiciones en el proceso de transformación del elemento.
+Las animaciones son bastante parecidas a las transiciones. Ambas tienen en común que actúan sobre los valores de las propiedades de un elemento transformándolos gradualmente en otros valores. Sin embargo, las animaciones ofrecen bastante más control que las transiciones en el proceso de transformación del elemento.
 
 ### Sintaxis
 
-Al igual que las trnasiciones definir las propiedades individuales o usar usar la propiedad abreviada.
+Al igual que las transiciones se puede definir las propiedades individuales o usar la propiedad abreviada.
 
 Utilizando las propiedades individuales:
 ```css
@@ -307,7 +308,7 @@ div {
 }
 ```
 
-Ningun valor es obligatorio y cada propiedad tiene un valor por defecto.
+Ningún valor es obligatorio y cada propiedad tiene un valor por defecto.
 
 ### Keyframes
 
@@ -324,7 +325,7 @@ Se definen de la siguiente manera:
 	}
     25% {
         width: 200px;
-	}
+    }
     50% {
         height: 200px;
     }
@@ -340,7 +341,7 @@ Se definen de la siguiente manera:
 }
 ```
 
-Asi se veria la animación aplicada a un elemento
+Así se vera la animación aplicada a un elemento
 
 ![ejemplo timing function](./images/ejemplo-keyframes.gif)
 
@@ -348,9 +349,9 @@ Asi se veria la animación aplicada a un elemento
 
 ### Ejemplo animación inicial
 
-En este ejemplo vamos a tomar el ejemplo de medidas espaciales y vamos a agregar una animación de inicio que puede servir para presentar la informacion secuencialmente al usuario.
+En este ejemplo vamos a tomar el ejemplo de medidas espaciales y vamos a agregar una animación de inicio que puede servir para presentar la información secuencialmente al usuario.
 
-![ejemplo animacion inicial](./images/ejemplo-animacion-inicial.png)
+![ejemplo animación inicial](./images/ejemplo-animacion-inicial.png)
 
 Vamos a utilizar una animación reutilizable a todos los elementos que quiera.
 
@@ -376,9 +377,9 @@ hr {
 }
 ```
 
-![ejemplo animacion inicial](./images/ejemplo-animacion-inicial-durante.gif)
+![ejemplo animación inicial durante](./images/ejemplo-animacion-inicial-durante.gif)
 
-Una de las ventajas que podemos observar es que la animacion empieza a reproducir cuando termina de cargar los elementos. Ahora puedo controlar el orden en el cual se muestran individualmente.
+Una de las ventajas que podemos observar es que la animación empieza a reproducir cuando termina de cargar los elementos. Ahora puedo controlar el orden en el cual se muestran individualmente.
 
 ```css
 .material_elemento,
@@ -386,7 +387,8 @@ Una de las ventajas que podemos observar es que la animacion empieza a reproduci
 .testimonio_elemento,
 hr {
     animation: aparecer 1.2s;
-    animation-fill-mode: both; /* Necesario para que los elementos tomen los valores iniciales durante el delay */
+    animation-fill-mode: both;
+    /* Necesario para que los elementos tomen los valores iniciales durante el delay */
 }
 .material_elemento:nth-child(1) {
     animation-delay: 0;
@@ -415,24 +417,95 @@ hr:nth-of-type(2),
 
 Y asi queda la carga inicial de la página:
 
-![ejemplo animacion inicial](./images/ejemplo-animacion-inicial-despues.gif)
+![ejemplo animación inicial despues](./images/ejemplo-animacion-inicial-despues.gif)
 
 ### Propiedades
 
+#### *animation-name*:
+Especifica el nombre de la animación que es definida por la regla *@keyframes*.
 
-## Docs
-[https://developer.mozilla.org/es/docs/Web/CSS/transition](https://developer.mozilla.org/es/docs/Web/CSS/transition)
+#### *animation-duration*:
+Similar a *transition-duration*, especifica cuanto tiempo durara una iteración de la animación. Utiliza las unidades `s`
+para segundos y `ms` para milisegundos.
 
-[https://www.w3schools.com/cssref/css3_pr_transition.asp](https://www.w3schools.com/cssref/css3_pr_transition.asp)
+#### *animation-delay*:
+Similar a *transition-delay*, especifica cuanto tiempo tomara la animación en empezar y las siguientes veces si tiene mas de una iteración. Utiliza las unidades `s`
+para segundos y `ms` para milisegundos.
 
-[https://www.adictosaltrabajo.com/2012/07/09/css3-transiciones-animaciones/](https://www.adictosaltrabajo.com/2012/07/09/css3-transiciones-animaciones/)
+#### *animation-timing-function*:
+Similar a *transition-timing-function*, esto permite establecer una curva de aceleración para que la velocidad de la animación pueda variar a lo largo de su duración.
 
-[https://www.w3schools.com/cssref/css3_pr_animation.asp](https://www.w3schools.com/cssref/css3_pr_animation.asp)
+#### *animation-iteration-count*:
+Especifica la cantidad de veces que la animación es reproducida. Se puede definir la cantidad de veces o *infinite* para que la reproduzca indefinidamente.
 
-[https://animista.net/](https://animista.net/)
+#### *animation-direction*:
+Indica si debe reproducirse normalmente o invertir la dirección de la animación. Adicionalmente se puede especificar que intercambie la dirección por cada iteración.
 
-[https://material.io/design/motion/understanding-motion.html](https://material.io/design/motion/understanding-motion.html)
+Un pequeño ejemplo para ilustrar su uso.
 
-[https://www.elegantthemes.com/blog/tips-tricks/when-it-makes-sense-to-use-animations-in-web-design](https://www.elegantthemes.com/blog/tips-tricks/when-it-makes-sense-to-use-animations-in-web-design)
+```css
+.foto_normal {
+    transform-origin: center center;
+    animation: rotacion-pelota 3s 3 ease-in-out;
+    animation-direction: alternate;
+}
 
-[https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9](https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9)
+@keyframes rotacion-pelota {
+    from { /* from equivale a 0% */
+        transform: translate(-100px, 0) rotate(0deg);
+    }
+    to { /* to equivale a 100% */
+        transform: translate(100px, 0) rotate(360deg);
+    }
+}
+```
+
+![ejemplo animation direction](./images/ejemplo-animation-direction.gif)
+
+#### *animation-fill-mode*:
+Como vemos en el ejemplo de *animation-direction* al termina la animación el elemento deja de tomar los valores de la animacion y esta propiedad permite indicar si quiero que mantenga los valores una vez terminada o antes de que empiece si tiene un valor de *animation-delay*.
+
+Y modificando este valor quedaria asi
+```css
+.foto_normal {
+    transform-origin: center center;
+    animation: rotacion-pelota 3s 3 ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+```
+
+![ejemplo fill mode](./images/ejemplo-animation-fill-mode.gif)
+
+#### *animation-play-state*:
+Determina si una animación está en ejecución o en pausa.
+
+Si quiero pausar la animación al poner el mouse sobre el elemento puedo hacerlo de esta manera.
+```css
+.foto_normal:hover {
+  animation-play-state: paused;
+}
+```
+
+![ejemplo play state](./images/ejemplo-animation-play-state.gif)
+
+
+## Material adicional
+[Documentación de mozilla sobre transiciones](https://developer.mozilla.org/es/docs/Web/CSS/transition)
+
+[Documentación de mozilla sobre animaciones](https://developer.mozilla.org/es/docs/Web/CSS/animation)
+
+[Documentación de w3schools sobre transiciones](https://www.w3schools.com/cssref/css3_pr_transition.asp)
+
+[Documentación de w3schools sobre animaciones](https://www.w3schools.com/cssref/css3_pr_animation.asp)
+
+
+[Transiciones y animaciones con CSS3](https://www.adictosaltrabajo.com/2012/07/09/css3-transiciones-animaciones/)
+
+[CSS animations on demand](https://animista.net/)
+
+[Understanding motion](https://material.io/design/motion/understanding-motion.html)
+
+[When It Makes Sense to Use Animations in Web Design](https://www.elegantthemes.com/blog/tips-tricks/when-it-makes-sense-to-use-animations-in-web-design)
+
+[The ultimate guide to proper use of animation in UX](https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9)

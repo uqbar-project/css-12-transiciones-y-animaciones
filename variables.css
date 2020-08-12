@@ -68,18 +68,21 @@ div {
 }
 
 .foto_normal {
-  animation: rotacion-pelota 5s infinite;
   transform-origin: center center;
+  animation: rotacion-pelota 3s 3 ease-in-out;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+.foto_normal:hover {
+  animation-play-state: paused;
 }
 
 @keyframes rotacion-pelota {
-  0% {
+  from { /* from equivale a 0% */
     transform: translate(-100px, 0) rotate(0deg);
   }
-  50% {
+  to { /* to equivale a 100% */
     transform: translate(100px, 0) rotate(360deg);
-  }
-  100% {
-    transform: translate(-100px, 0) rotate(0deg);
   }
 }
