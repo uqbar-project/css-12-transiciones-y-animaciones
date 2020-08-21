@@ -509,3 +509,7 @@ Si quiero pausar la animación al poner el mouse sobre el elemento puedo hacerlo
 [When It Makes Sense to Use Animations in Web Design](https://www.elegantthemes.com/blog/tips-tricks/when-it-makes-sense-to-use-animations-in-web-design)
 
 [The ultimate guide to proper use of animation in UX](https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9)
+
+[Css animation examples](https://www.mockplus.com/blog/post/css-animation-examples)
+
+[Prefers reduced motion media query](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
