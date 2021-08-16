@@ -1,0 +1,16 @@
+/* 
+  --bg-color-splashscreen: #1d1d1d;
+  --bg-color-main: #393939
+   */
+   
+html {
+  font-size: 16px;
+  --bg-color-splashscreen: #1d1d1d;
+  --bg-color-main: #393939;
+  --bg-color: var(--bg-color-splashscreen);
+}
+
+body {
+  height: 100%;
+  background-color: var(--bg-color);
+}

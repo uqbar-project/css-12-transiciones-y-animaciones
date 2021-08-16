@@ -1,0 +1,11 @@
+splashscreen > #logo {
+  width: 35%;
+  height: auto;
+
+  position: absolute;
+  top: 0;
+  bottom: 280px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
