@@ -1,5 +1,7 @@
 splashscreen {
-  --spin-and-scale-anim-duration: 1.8s
+  --spin-and-scale-anim-duration: 1.8s;
+  --text-in-anim-duration: 0.5s;
+  --text-in-anim-delay: calc(var(--spin-and-scale-anim-duration) + 0.4s)
 }
 
 splashscreen > #logo {
@@ -33,7 +35,7 @@ splashscreen > #logo {
 }
 
 splashscreen > h1 {
-  animation: text-in 0.5s ease-out calc(var(--spin-and-scale-anim-duration) + 0.4s) forwards;
+  animation: text-in var(--text-in-anim-duration) ease-out var(--text-in-anim-delay) forwards;
 }
 
 @keyframes text-in {
