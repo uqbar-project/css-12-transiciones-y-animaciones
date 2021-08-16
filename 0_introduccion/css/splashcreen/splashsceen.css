@@ -1,11 +1,20 @@
+splashscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  flex-direction: column;
+}
+
 splashscreen > #logo {
   width: 35%;
   height: auto;
+  margin-bottom: 15px;
+}
 
-  position: absolute;
-  top: 0;
-  bottom: 280px;
-  right: 0;
-  left: 0;
-  margin: auto;
+splashscreen > h1 {
+  color: var(--h1-primary-splashscreen);
+  bottom: 350px;
+  font-size: 3em;
+  visibility: hidden;
 }

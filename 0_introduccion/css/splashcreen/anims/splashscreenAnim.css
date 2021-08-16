@@ -1,5 +1,9 @@
+splashscreen {
+  --spin-and-scale-anim-duration: 1.8s
+}
+
 splashscreen > #logo {
-  animation: spin-and-scale 1.8s forwards;
+  animation: spin-and-scale var(--spin-and-scale-anim-duration) forwards;
 }
 
 @keyframes spin-and-scale {
@@ -28,40 +32,47 @@ splashscreen > #logo {
   }
 }
 
-/* 
-Reference
-
-#monk-loading {
-  animation: monk-fade-in 0.5s normal, monk-bounce 4s 0.5s infinite;
+splashscreen > h1 {
+  animation: text-in 0.5s ease-out calc(var(--spin-and-scale-anim-duration) + 0.4s) forwards;
 }
 
-
-@keyframes sass-logo-popup {
+@keyframes text-in {
   0% {
-    transform: translate(0, -2em) scaleY(1.07);
+    visibility: visible;
+    transform: translateX(-240%) skew(40deg);
+    filter: blur(6px);
   }
 
-  5% {
-    transform: translate(0, 0) scaleY(0.97);
+  39%{
+    filter: blur(8px);
+    transform: skew(50deg);
   }
 
-  10% {
-    transform: translate(0, -0.5em) scaleY(1.01);
+  40%{
+    transform: translateX(0) skew(-25deg);
+    filter: blur(2px);
   }
 
-  15% {
-    transform: translate(0, 0em) scaleY(1);
+  50%{
+    filter: blur(0px);
+    transform: translateX(40%) skew(-50deg);
   }
 
-  20% {
-    transform: translate(0, -0.25em) scaleY(1);
+  65%{
+    transform: translateX(-20%) skew(30deg);
   }
 
-  25% {
-    transform: translate(0, -0em) scaleY(1);
+  74%{
+    transform: translateX(15%) skew(10deg);
   }
 
-  100% {
-    transform: translate(0, -2em) scaleY(1.07);
+  85%{
+    transform: translateX(0);
   }
-} */
+
+  100%{
+    visibility: visible;
+    transform: translateX(0);
+    filter: blur(0px);
+  }
+}
