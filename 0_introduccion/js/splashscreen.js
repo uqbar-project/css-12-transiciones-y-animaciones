@@ -8,6 +8,6 @@ logoAndText.addEventListener('animationend', async ({ animationName }) => {
     await animFadeOut(splashscreen)
     splashscreen.remove()
     main.style.display = 'inherit'
-    await animFadeIn(main)
+    await animFadeIn(main, 500) //ms
   }
 })
