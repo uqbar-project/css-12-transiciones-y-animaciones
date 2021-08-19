@@ -13,6 +13,17 @@ async function animFade(element, options) {
   return sleep(duration)
 }
 
+async function animFadeIn(element) {
+
+  const animOptions = {
+    animation: [
+      { opacity: 0 },
+      { opacity: 1 }
+    ]
+  }
+  return animFade(element, animOptions)
+}
+
 async function animFadeOut(element) {
 
   const animOptions = {

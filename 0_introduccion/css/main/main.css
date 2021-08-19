@@ -15,6 +15,10 @@ header {
   box-shadow: 5px 5px 15px var(--secondary-shadow-color);
 }
 
+#main{
+  opacity: 0;
+}
+
 /* BUTTONS */
 .primary-button {
   background-color: var(--primary-button-bg-color);
