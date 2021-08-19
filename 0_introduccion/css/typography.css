@@ -1,0 +1,10 @@
+html {
+  --text-default-color: #dedede;
+}
+
+h2 {
+  color: var(--text-default-color);
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 3px 3px 3px var(--sass-shadow-color);
+}

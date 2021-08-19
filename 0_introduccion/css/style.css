@@ -17,3 +17,7 @@ body {
   background-color: var(--bg-color-main);
   margin: 0
 }
+
+#main {
+  display: none;
+}
