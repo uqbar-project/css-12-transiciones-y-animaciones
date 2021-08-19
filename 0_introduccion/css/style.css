@@ -8,13 +8,12 @@ html {
 
   --bg-color-splashscreen: #1d1d1d;
   --bg-color-main: #393939;
-  --bg-color: var(--bg-color-splashscreen);
 
   --h1-primary-splashscreen: #a2a2a2;
 }
 
 body {
   font-family: 'Rubik', sans-serif;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-main);
   margin: 0
 }

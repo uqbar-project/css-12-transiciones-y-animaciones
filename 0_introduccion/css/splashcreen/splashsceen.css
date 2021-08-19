@@ -5,6 +5,7 @@ splashscreen {
   height: 100vh;
   flex-direction: column;
   overflow: hidden;
+  background-color: var(--bg-color-splashscreen);
 }
 
 splashscreen > #logo {
