@@ -91,6 +91,13 @@ header {
   margin-top: 5%;
 }
 
+#main > section >article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
 .main-subtitle {
   overflow-wrap: break-word;
   max-width: 24em;

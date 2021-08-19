@@ -18,10 +18,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
 
   <!--CSS / Base-->
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/typography.css">
-  <link rel="stylesheet" href="./css/main/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/main/main.css">
   <link rel="stylesheet" href="css/splashcreen/splashsceen.css">
+
+  <!--CSS / Code-->
+  <link rel="stylesheet" href="css/main/codeCard.css">
 
   <!--CSS / Animations-->
   <link rel="stylesheet" href="css/splashcreen/anims/splashscreenAnim.css">
@@ -43,11 +46,48 @@
       <h2 class="header-title">Sass</h2>
       <button class="primary-button header-download-button">Download</button>
     </header>
-    
+
     <section>
-      <h1 class="main-title">CSS with superpowers</h1>
-      <p class="main-subtitle">Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-      <button class="accent-icon-button main-colaborate-button"><i class="fab fa-github-square"></i>Colaborate</button>
+      <article>
+        <h1 class="main-title">CSS with superpowers</h1>
+        <p class="main-subtitle">Sass is the most mature, stable, and powerful professional grade CSS extension language
+          in the world.</p>
+        <button class="accent-icon-button main-colaborate-button"><i
+            class="fab fa-github-square"></i>Colaborate</button>
+      </article>
+
+      <article>
+        <div class="code-window">
+          <div class="dots">
+            <div class="red"></div>
+            <div class="orange"></div>
+            <div class="green"></div>
+          </div>
+          <pre class="language-javascript line-numbers">
+            <code class=" language-javascript">
+              <span class="token keyword">import</span> <span class="token punctuation">{</span>DomSanitizer<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
+              <span class="token keyword">import</span> <span class="token punctuation">{</span>Pipe<span class="token punctuation">,</span> PipeTransform<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+              
+              <span class="token keyword">import</span> <span class="token punctuation">{</span> icons <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'feather-icons'</span><span class="token punctuation">;</span> <span class="token comment">// v4+</span>
+              
+              @<span class="token function">Pipe</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'feather'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">FeatherIconsPipe</span> <span class="token keyword">implements</span> <span class="token class-name">PipeTransform</span> <span class="token punctuation">{</span>
+              
+                <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> sanitizer<span class="token punctuation">:</span> DomSanitizer<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+              
+                <span class="token function">transform</span><span class="token punctuation">(</span>icon<span class="token punctuation">:</span> string<span class="token punctuation">,</span> size<span class="token punctuation">:</span> number <span class="token operator">=</span> <span class="token number">24</span><span class="token punctuation">,</span> color<span class="token punctuation">:</span> string <span class="token operator">=</span> <span class="token string">'inherit'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>sanitizer<span class="token punctuation">.</span><span class="token function">bypassSecurityTrustHtml</span><span class="token punctuation">(</span>icons<span class="token punctuation">[</span>icon<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toSvg</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                    width<span class="token punctuation">:</span> size<span class="token punctuation">,</span>
+                    height<span class="token punctuation">:</span> size<span class="token punctuation">,</span>
+                    color<span class="token punctuation">:</span> color
+                  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+              <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            </code>
+          </pre>
+        </div>
+      </article>
+      
     </section>
   </div>
 
