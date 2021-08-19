@@ -1,6 +1,7 @@
 html {
-  --text-default-color: #dedede;
-  --text-secondary-color: #bababa;
+  --text-default-color: #373737;
+  --text-secondary-color: #5c5c5c;
+  --text-ternary-color: #dedede;
 }
 
 h1 {

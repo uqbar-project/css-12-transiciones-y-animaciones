@@ -2,7 +2,7 @@ html {
   --sass-color: #c03e7f;
   --primary-button-bg-color: #0e0e0e;
   --sass-shadow-color: #8c2a6d;
-  --secondary-shadow-color: #2e2e2e;
+  --secondary-shadow-color: #b6af85;
   --accent-button-bg-color: green;
 }
 
@@ -13,6 +13,7 @@ header {
   background-color: var(--sass-color);
   border-radius: 0 0 15px 15px;
   box-shadow: 5px 5px 15px var(--secondary-shadow-color);
+  --text-default-color: #dedede;
 }
 
 #main{
@@ -22,7 +23,7 @@ header {
 /* BUTTONS */
 .primary-button {
   background-color: var(--primary-button-bg-color);
-  color: var(--text-default-color);
+  color: var(--text-ternary-color);
   border-radius: 8px;
   border: none;
   padding: auto;
@@ -38,7 +39,7 @@ header {
 
 .accent-icon-button {
   background-color: var(--accent-button-bg-color);
-  color: var(--text-default-color);
+  color: var(--text-ternary-color);
   border-radius: 8px;
   border: none;
   padding: auto;
@@ -55,6 +56,7 @@ header {
 .main-colaborate-button {
   margin-top: 1em;
   box-shadow: 6px 6px 6px var(--secondary-shadow-color);
+  color: var(--text-ternary-color);
 }
 
 .main-colaborate-button:hover {
