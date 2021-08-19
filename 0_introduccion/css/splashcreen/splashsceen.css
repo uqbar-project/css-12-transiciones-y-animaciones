@@ -2,8 +2,9 @@ splashscreen {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
   flex-direction: column;
+  overflow: hidden;
 }
 
 splashscreen > #logo {
@@ -12,7 +13,19 @@ splashscreen > #logo {
   margin-bottom: 15px;
 }
 
-splashscreen > h1 {
+splashscreen > #gorilla {
+  height: auto;
+  width: 5%;
+
+  opacity: 0;
+  color: #181818;
+  
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.logo-and-text > h1 {
   color: var(--h1-primary-splashscreen);
   bottom: 350px;
   font-size: 3em;

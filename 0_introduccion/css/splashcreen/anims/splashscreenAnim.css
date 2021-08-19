@@ -1,23 +1,27 @@
 splashscreen {
   --spin-and-scale-anim-duration: 1.8s;
   --text-in-anim-duration: 0.5s;
-  --text-in-anim-delay: calc(var(--spin-and-scale-anim-duration) + 0.4s)
+  --text-in-anim-delay: calc(var(--spin-and-scale-anim-duration) + 0.4s);
+  --show-gorilla-duration: calc(2 * var(--spin-and-scale-anim-duration));
+  --show-gorilla-delay: 0.5s;
+  --scale-out-anim-duration: 1.4s;
+  --scale-out-anim-delay: calc(var(--text-in-anim-delay) + var(--text-in-anim-duration) + 0.6s);
 }
 
-splashscreen > #logo {
-  animation: spin-and-scale var(--spin-and-scale-anim-duration) forwards;
-}
-
+/*******************************/
+/* 1. Spin and Scale Animation */
+/*              Logo           */
+/*******************************/
 @keyframes spin-and-scale {
   0% {
     transform: scale(0) rotate(-360deg);
   }
 
-  65%{
+  65% {
     transform: scale(1.3);
   }
 
-  85%{
+  85% {
     transform: scale(1.3);
   }
 
@@ -29,15 +33,15 @@ splashscreen > #logo {
     transform: scale(1.1);
   }
 
-  100%{
+  100% {
     transform: scale(1);
   }
 }
 
-splashscreen > h1 {
-  animation: text-in var(--text-in-anim-duration) ease-out var(--text-in-anim-delay) forwards;
-}
-
+/************************/
+/* 2. Text in Animation */
+/*          Text        */
+/************************/
 @keyframes text-in {
   0% {
     visibility: visible;
@@ -45,36 +49,93 @@ splashscreen > h1 {
     filter: blur(6px);
   }
 
-  39%{
+  39% {
     filter: blur(8px);
     transform: skew(50deg);
   }
 
-  40%{
+  40% {
     transform: translateX(0) skew(-25deg);
     filter: blur(2px);
   }
 
-  50%{
+  50% {
     filter: blur(0px);
     transform: translateX(40%) skew(-50deg);
   }
 
-  65%{
+  65% {
     transform: translateX(-20%) skew(30deg);
   }
 
-  74%{
+  74% {
     transform: translateX(15%) skew(10deg);
   }
 
-  85%{
+  85% {
     transform: translateX(0);
   }
 
-  100%{
+  100% {
     visibility: visible;
     transform: translateX(0);
     filter: blur(0px);
   }
+}
+
+/************************/
+/* 3. Gorilla Animation */
+/*          Gorilla     */
+/************************/
+@keyframes show-gorilla {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/**************************/
+/* 4. Scale out Animation */
+/*      Text and Logo     */
+/**************************/
+@keyframes scale-out {
+  0% {
+    transform: scale(1);
+  }
+
+  15%{
+    transform: scale(0.875);
+  }
+  
+  40%{
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+.logo-and-text > #logo {
+  animation: spin-and-scale var(--spin-and-scale-anim-duration) forwards;
+}
+
+.logo-and-text > h1 {
+  animation: text-in var(--text-in-anim-duration) ease-out var(--text-in-anim-delay) forwards;
+}
+
+splashscreen > #gorilla {
+  animation: show-gorilla var(--show-gorilla-duration) var(--show-gorilla-delay) forwards;
+}
+
+.logo-and-text {
+  animation: scale-out var(--scale-out-anim-duration) ease-in var(--scale-out-anim-delay) forwards
 }
