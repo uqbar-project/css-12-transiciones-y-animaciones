@@ -1,10 +1,22 @@
 html {
   --text-default-color: #dedede;
+  --text-secondary-color: #bababa;
+}
+
+h1 {
+  font-size: 3.5em;
+  margin: 0;
+  
+  color: var(--text-default-color);
 }
 
 h2 {
-  color: var(--text-default-color);
   font-size: 3em;
   margin: 0;
-  text-shadow: 3px 3px 3px var(--sass-shadow-color);
+  color: var(--text-default-color);
+}
+
+p {
+  color: var(--text-secondary-color);
+  font-size: 1.5em;
 }
