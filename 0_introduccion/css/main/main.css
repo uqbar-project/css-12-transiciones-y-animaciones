@@ -91,10 +91,21 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5%;
 }
 
-#main > section >article {
+#main > section > .first-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+
+  background-color: var(--bg-color-first-block);
+  z-index: -1;
+}
+
+#main > section > .first-block > article {
   display: flex;
   flex-direction: column;
   align-items: center;

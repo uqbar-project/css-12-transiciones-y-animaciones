@@ -7,7 +7,14 @@ html {
   font-size: 16px;
 
   --bg-color-splashscreen: #1d1d1d;
-  --bg-color-main: #d7cfa4;
+  /*
+    TODO: No me decido entre estos dos
+    --bg-color-main: #ABEDA8;
+    --bg-color-main: #FFFADB;
+  */
+  --bg-color-main: #fffadb;
+  --bg-main-shadow-color: #dfdab9;
+  --bg-color-first-block: #d7cfa4;
 
   --h1-primary-splashscreen: #a2a2a2;
 }

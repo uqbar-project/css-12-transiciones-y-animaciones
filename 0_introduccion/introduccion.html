@@ -10,7 +10,6 @@
   <script src="https://kit.fontawesome.com/df5bbe97ca.js" crossorigin="anonymous"></script>
 
   <!--Google fonts-->
-
   <!--Old-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=K2D:300,400,500,700,800">
 
@@ -22,6 +21,7 @@
   <link rel="stylesheet" href="css/typography.css">
   <link rel="stylesheet" href="css/main/main.css">
   <link rel="stylesheet" href="css/splashcreen/splashsceen.css">
+  <link rel="stylesheet" href="css/main/details.css">
 
   <!--CSS / Code-->
   <link rel="stylesheet" href="css/main/codeCard.css">
@@ -51,22 +51,25 @@
     </header>
 
     <section>
-      <article>
-        <h1 class="main-title">CSS with superpowers</h1>
-        <p class="main-subtitle">Sass is the most mature, stable, and powerful professional grade CSS extension language
-          in the world.</p>
-        <button class="accent-icon-button main-colaborate-button"><i
-            class="fab fa-github-square"></i>Colaborate</button>
-      </article>
+      <span class="first-block">
+        <article>
+          <h1 class="main-title">CSS with superpowers</h1>
+          <p class="main-subtitle">Sass is the most mature, stable, and powerful professional grade CSS extension
+            language
+            in the world.</p>
+          <button class="accent-icon-button main-colaborate-button"><i
+              class="fab fa-github-square"></i>Colaborate</button>
+        </article>
 
-      <article class="article-code">
-        <div class="code-window">
-          <div class="dots">
-            <div class="red"></div>
-            <div class="orange"></div>
-            <div class="green"></div>
-          </div>
-          <pre class="language-javascript line-numbers">
+        <!--Ocultar este elemento, si no te moris-->
+        <article class="article-code">
+          <div class="code-window">
+            <div class="dots">
+              <div class="red"></div>
+              <div class="orange"></div>
+              <div class="green"></div>
+            </div>
+            <pre class="language-javascript line-numbers">
             <code class=" language-javascript">
               <span class="token keyword">import</span> <span class="token punctuation">{</span>DomSanitizer<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
               <span class="token keyword">import</span> <span class="token punctuation">{</span>Pipe<span class="token punctuation">,</span> PipeTransform<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
@@ -88,9 +91,48 @@
               <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
             </code>
           </pre>
-        </div>
-      </article>
-      
+          </div>
+        </article>
+      </span>
+
+      <section class="details">
+        <article class="details__card">
+          <h3 class="details__card__title">CSS Compatible</h3>
+          <p class="details__card__description">Sass is completely compatible with all versions of CSS. We take this
+            compatibility seriously, so that you can seamlessly use any available CSS libraries.</p>
+        </article>
+
+        <article class="details__card">
+          <h3 class="details__card__title">Mature</h3>
+          <p class="details__card__description">Sass has been actively supported for over 14 years by its loving Core
+            Team.</p>
+        </article>
+
+        <article class="details__card">
+          <h3 class="details__card__title">Industry Approved</h3>
+          <p class="details__card__description">Over and over again, the industry is choosing Sass as the premier CSS
+            extension language.</p>
+        </article>
+
+        <article class="details__card">
+          <h3 class="details__card__title">Mature</h3>
+          <p class="details__card__description">Sass has been actively supported for over 14 years by its loving Core
+            Team.</p>
+        </article>
+
+        <article class="details__card">
+          <h3 class="details__card__title">Large Community</h3>
+          <p class="details__card__description">Sass is actively supported and developed by a consortium of several tech
+            companies and hundreds of developers.</p>
+        </article>
+
+        <article class="details__card">
+          <h3 class="details__card__title">Frameworks</h3>
+          <p class="details__card__description">There are an endless number of frameworks built with Sass. Compass,
+            Bourbon, and Susy just to name a few.</p>
+        </article>
+      </section>
+
       <arrows>
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-down"></i>
