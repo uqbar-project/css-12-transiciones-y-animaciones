@@ -15,9 +15,10 @@ html {
 body {
   font-family: 'Rubik', sans-serif;
   background-color: var(--bg-color-main);
-  margin: 0
+  margin: 0;
 }
 
 #main {
   display: none;
+  margin: 0;
 }

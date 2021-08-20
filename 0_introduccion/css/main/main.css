@@ -13,6 +13,9 @@ header {
   background-color: var(--sass-color);
   border-radius: 0 0 15px 15px;
   box-shadow: 5px 5px 15px var(--secondary-shadow-color);
+  width: 100%;
+  box-sizing: border-box;
+
   --text-default-color: #dedede;
 }
 
