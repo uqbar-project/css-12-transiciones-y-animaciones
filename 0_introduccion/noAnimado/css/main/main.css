@@ -1,0 +1,110 @@
+html {
+  --sass-color: #c03e7f;
+  --primary-button-bg-color: #0e0e0e;
+  --sass-shadow-color: #8c2a6d;
+  --secondary-shadow-color: #b6af85;
+  --accent-button-bg-color: green;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 2.5% 8%;
+  background-color: var(--sass-color);
+  border-radius: 0 0 15px 15px;
+  box-shadow: 5px 5px 15px var(--secondary-shadow-color);
+  width: 100%;
+  box-sizing: border-box;
+
+  --text-default-color: #dedede;
+}
+
+/* BUTTONS */
+.primary-button {
+  background-color: var(--primary-button-bg-color);
+  color: var(--text-ternary-color);
+  border-radius: 8px;
+  border: none;
+  padding: auto;
+  height: 3em;
+  width: 8em;
+  font-size: 1em;
+}
+
+.primary-button:hover {
+  cursor: pointer;
+}
+
+.accent-icon-button {
+  background-color: var(--accent-button-bg-color);
+  color: var(--text-ternary-color);
+  border-radius: 8px;
+  border: none;
+  padding: auto;
+  height: 3em;
+  width: 8em;
+  font-size: 1em;
+}
+
+.accent-icon-button:hover {
+  cursor: pointer;
+}
+
+.main-colaborate-button {
+  margin-top: 1em;
+  box-shadow: 6px 6px 6px var(--secondary-shadow-color);
+  color: var(--text-ternary-color);
+}
+
+.header-download-button {
+  box-shadow: 6px 6px 6px var(--sass-shadow-color);
+}
+
+.splashscreen-continue-button{
+  box-shadow: 6px 6px 6px black;
+}
+
+.fab {
+  margin-right: 6px;
+}
+/* BUTTONS */
+
+.header-title {
+  text-shadow: 3px 3px 3px var(--sass-shadow-color);
+}
+
+.main-title {
+  text-shadow: 3px 3px 3px var(--secondary-shadow-color);
+}
+
+#main > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main > section > .first-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+
+  background-color: var(--bg-color-first-block);
+  z-index: -1;
+}
+
+#main > section > .first-block > article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.main-subtitle {
+  overflow-wrap: break-word;
+  max-width: 24em;
+  text-align: center;
+  text-shadow: 3px 3px 3px var(--secondary-shadow-color);
+}

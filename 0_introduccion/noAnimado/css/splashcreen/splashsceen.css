@@ -1,0 +1,33 @@
+splashscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--bg-color-splashscreen);
+}
+
+splashscreen > #logo {
+  width: 35%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+splashscreen > #gorilla {
+  height: auto;
+  width: 5%;
+
+  color: #181818;
+  
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.logo-and-text > h1 {
+  color: var(--h1-primary-splashscreen);
+  bottom: 350px;
+  font-size: 3em;
+  margin-bottom: 32px;
+}

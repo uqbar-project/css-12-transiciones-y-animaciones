@@ -1,0 +1,30 @@
+html {
+  --text-default-color: #373737;
+  --text-secondary-color: #5c5c5c;
+  --text-ternary-color: #dedede;
+}
+
+h1 {
+  font-size: 3.5em;
+  margin: 0;
+  
+  color: var(--text-default-color);
+}
+
+h2 {
+  font-size: 3em;
+  margin: 0;
+  color: var(--text-default-color);
+}
+
+h3 {
+  font-size: 2em;
+  margin: 0;
+  color: var(--text-default-color);
+}
+
+p {
+  color: var(--text-secondary-color);
+  margin: 0;
+  font-size: 1.5em;
+}

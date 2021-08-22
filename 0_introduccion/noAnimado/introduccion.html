@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Introduccion</title>
+
+  <!--Font Awesome Icons-->
+  <script src="https://kit.fontawesome.com/df5bbe97ca.js" crossorigin="anonymous"></script>
+
+  <!--Google fonts-->
+  <!--Old-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=K2D:300,400,500,700,800">
+
+  <!--New-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+
+  <!--CSS / Base-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/main/main.css">
+  <link rel="stylesheet" href="css/splashcreen/splashsceen.css">
+  <link rel="stylesheet" href="css/main/details.css">
+
+  <!--CSS / Code-->
+  <link rel="stylesheet" href="css/main/codeCard.css">
+
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <h2 class="header-title">Sass</h2>
+      <button class="primary-button header-download-button">Download</button>
+    </header>
+
+    <section>
+      <span class="first-block">
+        <article>
+          <h1 class="main-title">CSS with superpowers</h1>
+          <p class="main-subtitle">Sass is the most mature, stable, and powerful professional grade CSS extension
+            language
+            in the world.</p>
+          <button class="accent-icon-button main-colaborate-button">
+            <i class="fab fa-github-square"></i>Colaborate
+          </button>
+        </article>
+
+        <!--Ocultar este elemento, si no te moris-->
+        <article class="article-code">
+          <div class="code-window">
+            <div class="dots">
+              <div class="red"></div>
+              <div class="orange"></div>
+              <div class="green"></div>
+            </div>
+            <pre class="language-javascript line-numbers">
+            <code class=" language-javascript">
+              <span class="token keyword">import</span> <span class="token punctuation">{</span>DomSanitizer<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
+              <span class="token keyword">import</span> <span class="token punctuation">{</span>Pipe<span class="token punctuation">,</span> PipeTransform<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+              
+              <span class="token keyword">import</span> <span class="token punctuation">{</span> icons <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'feather-icons'</span><span class="token punctuation">;</span> <span class="token comment">// v4+</span>
+              
+              @<span class="token function">Pipe</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'feather'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">FeatherIconsPipe</span> <span class="token keyword">implements</span> <span class="token class-name">PipeTransform</span> <span class="token punctuation">{</span>
+              
+                <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> sanitizer<span class="token punctuation">:</span> DomSanitizer<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+              
+                <span class="token function">transform</span><span class="token punctuation">(</span>icon<span class="token punctuation">:</span> string<span class="token punctuation">,</span> size<span class="token punctuation">:</span> number <span class="token operator">=</span> <span class="token number">24</span><span class="token punctuation">,</span> color<span class="token punctuation">:</span> string <span class="token operator">=</span> <span class="token string">'inherit'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>sanitizer<span class="token punctuation">.</span><span class="token function">bypassSecurityTrustHtml</span><span class="token punctuation">(</span>icons<span class="token punctuation">[</span>icon<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toSvg</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                    width<span class="token punctuation">:</span> size<span class="token punctuation">,</span>
+                    height<span class="token punctuation">:</span> size<span class="token punctuation">,</span>
+                    color<span class="token punctuation">:</span> color
+                  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+              <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            </code>
+          </pre>
+          </div>
+        </article>
+      </span>
+
+      <section class="details">
+        <article class="details__card">
+          <h3 class="details__card__title">CSS Compatible</h3>
+          <p class="details__card__description">Sass is completely compatible with all versions of CSS. We take this
+            compatibility seriously, so that you can seamlessly use any available CSS libraries.</p>
+        </article>
+
+        <article class="details__card">
+          <h3 class="details__card__title">Mature</h3>
+          <p class="details__card__description">Sass has been actively supported for over 14 years by its loving Core
+            Team.</p>
+        </article>
+
+        <article class="details__card">
+          <h3 class="details__card__title">Industry Approved</h3>
+          <p class="details__card__description">Over and over again, the industry is choosing Sass as the premier CSS
+            extension language.</p>
+        </article>
+
+        <article class="details__card">
+          <h3 class="details__card__title">Mature</h3>
+          <p class="details__card__description">Sass has been actively supported for over 14 years by its loving Core
+            Team.</p>
+        </article>
+
+        <article class="details__card">
+          <h3 class="details__card__title">Large Community</h3>
+          <p class="details__card__description">Sass is actively supported and developed by a consortium of several tech
+            companies and hundreds of developers.</p>
+        </article>
+
+        <article class="details__card">
+          <h3 class="details__card__title">Frameworks</h3>
+          <p class="details__card__description">There are an endless number of frameworks built with Sass. Compass,
+            Bourbon, and Susy just to name a few.</p>
+        </article>
+      </section>
+
+    </section>
+  </div>
+
+  <!--JS Utils-->
+  <script src="js/utils.js"></script>
+
+  <!--JS Anims-->
+  <script src="js/anims/fadeAnim.js"></script>
+
+  <!--JS Main-->
+  <script src="js/splashscreen.js"></script>
+</body>
+
+</html>
